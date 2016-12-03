@@ -2,10 +2,8 @@
 include 'autoloader.php';
 
 
-use api\Tokenizers as Tokenizers;
+use api\Analysis as Analysis;
 
-$s = "Please allow me to introduce myself 
-        I'm a man of wealth and taste";
-$space = new Tokenizers\WhitespaceTokenizer();
-$result = $space->tokenize($s);
-var_dump($result);
+$analysis = new Analysis\DataAnalysis();
+
+var_dump($analysis->words);
