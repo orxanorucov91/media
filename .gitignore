@@ -1,0 +1,9 @@
+nbproject
+build/
+nbbuild/
+dist/
+*.pdf
+*.doc
+*.xlsx
+*.xls
+*.txt
