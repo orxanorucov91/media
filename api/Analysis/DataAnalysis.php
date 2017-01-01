@@ -54,13 +54,12 @@ class DataAnalysis{
         $suffix = $this->suffix;
         while($find === false){
             foreach($words as $pattern){
-                if(preg_match("/".$word."/i", $pattern) > 0){
+                if(preg_match("/\b".$word."\b/i", $pattern) > 0){
                     $find = true;
                     return $word;
                     break;
                 }
             }
-
             $word = $this->suffixParser($word, $suffix);
         }
     }
