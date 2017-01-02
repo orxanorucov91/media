@@ -2,8 +2,10 @@
 include 'autoloader.php';
 
 
-use api\Analysis as Analysis;
+use api\NGrams\NGramFactory;
 
-$analysis = new Analysis\DataAnalysis();
+$tokens = ['one','two','three'];
 
-var_dump($analysis->words);
+$bigrams = NGramFactory::create($tokens);
+
+var_dump($bigrams);
